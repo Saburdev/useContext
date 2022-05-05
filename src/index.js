@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import MyContextProvider from './context/MyContext';
+import UsersContext from './context/UsersContext';
 
-const app = (
-  <MyContextProvider>
-    <App/>
-  </MyContextProvider>
+let name = 'Teshavoy'
+
+
+const  app = (
+    <React.StrictMode>
+        <UsersContext.Provider value={ name } children = {<App/>}/>  
+    </React.StrictMode>
 )
 
 
